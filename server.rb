@@ -63,8 +63,9 @@ get '/leaderboard' do
   erb :index
 end
 
-get '/movies/:team' do
+get '/leaderboard/:team' do
   @team = params[:team]
+  @records=get_records('nfl.csv')
 
   erb :team
 end

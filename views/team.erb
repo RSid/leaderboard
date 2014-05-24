@@ -10,9 +10,16 @@
 
   <%= @team %>
 
-   <ul >
-
-    </ul>
+    <% @records.each do |team| %>
+      <% if @team==team[0] %>
+        <p><%= "Wins: #{team[1][:Wins]} Losses: #{team[1][:Losses]}" %></p>
+        <ul>
+          <% team.drop(2).each do |team_info| %>
+              <li><%= "Home team: #{team_info[0]} - #{team_info[1]} Away team: #{team_info[2]} - #{team_info[3]} | Result: " %> <%= team_info[1].to_i>team_info[3].to_i ? "#{team_info[0]} won." : "#{team_info[2]} won." %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
 
 
 

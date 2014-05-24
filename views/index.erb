@@ -8,18 +8,14 @@
 
   <h1>Leaderboard</h1>
 
-   <ul >
+   <ol >
 
     <% @records.each do |team| %>
-      <li><%= "#{team[0]} - Wins: #{team[1][:Wins]}, Losses: #{team[1][:Losses]}" %></li>
-        <ul>
-          <% team.drop(2).each do |team_info| %>
-              <li><%= "Home team: #{team_info[0]} - #{team_info[1]} Away team: #{team_info[2]} - #{team_info[3]}" %></li>
-          <% end %>
-        </ul>
+      <li><a href= <%= "/leaderboard/#{team[0]}" %> ><%= "#{team[0]}" %></a> <%= " - Wins: #{team[1][:Wins]}, Losses: #{team[1][:Losses]}" %></li>
+
     <% end %>
 
-    </ul>
+    </ol>
 
 
 
