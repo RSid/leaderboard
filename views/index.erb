@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard</title>
+</head>
+<body>
+
+  <h1>Leaderboard</h1>
+
+   <ul >
+
+    <% @records.each do |team| %>
+      <li><%= "#{team[0]} - Wins: #{team[1][:Wins]}, Losses: #{team[1][:Losses]}" %></li>
+        <ul>
+          <% team.drop(2).each do |team_info| %>
+              <li><%= "Home team: #{team_info[0]} - #{team_info[1]} Away team: #{team_info[2]} - #{team_info[3]}" %></li>
+          <% end %>
+        </ul>
+    <% end %>
+
+    </ul>
+
+
+
+</body>
+</html>
