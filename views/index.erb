@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Leaderboard</title>
+  <link rel="stylesheet" href="leaderboard.css" />
 </head>
 <body>
 
-  <h1>Leaderboard</h1>
-
-   <ol >
+  <a href="/leaderboard"><h1>Leaderboard</h1></a>
+  <div class="content">
+   <ol class="leaderboard-contents">
 
     <% @records.each do |team| %>
-      <li><a href= <%= "/leaderboard/#{team[0]}" %> ><%= "#{team[0]}" %></a> <%= " - Wins: #{team[1][:Wins]}, Losses: #{team[1][:Losses]}" %></li>
+      <li><span class="team-name"><strong><a href= <%= "/leaderboard/#{team[0]}" %> ><%= "#{team[0]}" %></a></strong></span> <%= " - Wins: #{team[1][:Wins]}, Losses: #{team[1][:Losses]}" %></li>
 
     <% end %>
 
     </ol>
 
-
-
+  </div>
 </body>
 </html>

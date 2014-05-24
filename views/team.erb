@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>Leaderboard</title>
+  <link rel="stylesheet" href="/leaderboard.css" />
 </head>
 <body>
 
-  <h1>Leaderboard</h1>
+  <a href="/leaderboard"><h1>Team Record</h1></a>
 
-  <%= @team %>
+  <div class="content">
+  <h2><%= @team %></h2>
 
     <% @records.each do |team| %>
       <% if @team==team[0] %>
+        <h3>Win-Loss Record</h3>
         <p><%= "Wins: #{team[1][:Wins]} Losses: #{team[1][:Losses]}" %></p>
-        <ul>
+        <h3>Games</h3>
+        <ul class="games-list">
           <% team.drop(2).each do |team_info| %>
-              <li><%= "Home team: #{team_info[0]} - #{team_info[1]} Away team: #{team_info[2]} - #{team_info[3]} | Result: " %> <%= team_info[1].to_i>team_info[3].to_i ? "#{team_info[0]} won." : "#{team_info[2]} won." %></li>
+              <li><%= "Home team: #{team_info[0]} - #{team_info[1]} &nbsp;&nbsp; Away team: #{team_info[2]} - #{team_info[3]}"%> <span class="result"><%=" | &nbsp; Result: " %> <%= team_info[1].to_i>team_info[3].to_i ? "#{team_info[0]} won." : "#{team_info[2]} won." %></span></li>
           <% end %>
         </ul>
       <% end %>
     <% end %>
-
-
+  </div>
 
 </body>
 </html>

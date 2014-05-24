@@ -1,0 +1,58 @@
+body {
+  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+}
+
+h1 {
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+  color: gray;
+  text-align: center;
+  font-size: 2.8em;
+  padding: 4px;
+  border: 8px double black;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.leaderboard-contents li {
+  padding: 8px 0px;
+}
+
+.team-name a {
+  font-size: 1.3em;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2em;
+}
+
+h3 {
+  text-decoration: underline;
+  font-size: 1.3em;
+}
+
+.content {
+  width: 95%;
+  margin: auto;
+}
+
+
+.leaderboard-contents > li {
+  font-size: 1.7em;
+}
+
+.result {
+  padding-left: 15px;
+}
+
+.games-list {
+  padding: 0px 17px;
+}
+
+.games-list li {
+  padding: 10px 0px;
+}
