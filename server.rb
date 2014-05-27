@@ -32,7 +32,7 @@ def get_records (file_name)
     if game[:Homescore].to_i>game[:Awayscore].to_i
       wins<< game[:Hometeam]
       losses<<game[:Awayteam]
-    else
+    elsif game[:Homescore].to_i<game[:Awayscore].to_i
       wins<< game[:Awayteam]
       losses<<game[:Hometeam]
     end
