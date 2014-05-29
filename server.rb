@@ -24,7 +24,7 @@ def get_records (file_name)
   wins=[]
   losses=[]
   team_names=[]
-  @records=[]
+  records=[]
 
   games.each do |game|
     team_names<<game[:Hometeam]
